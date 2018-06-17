@@ -34,7 +34,16 @@ contract CCCoinSale {
         require(msg.value == mul(_numberOfCoins, coinPrice));
         require(coinContract.balanceOf(this) >= _numberOfCoins);
         require(coinContract.transfer(msg.sender, _numberOfCoins));
+        
         coinsSold += _numberOfCoins;
+        
         emit Sell(msg.sender, _numberOfCoins);
+    }
+
+    function endSale() public {
+        require(msg.sender == admin);
+        require(coinContract.transfer(admin, coinContract.balanceOf(this)));
+        
+        selfdestruct(admin);
     }
 }
