@@ -1,0 +1,20 @@
+{
+    "name": "cc-token-sale",
+    "version": "1.0.0",
+    "description": "CC Coin Token Sale ICO",
+    "main": "truffle.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "dev": "lite-server"
+    },
+    "author": "Mehran Hydary",
+    "license": "ISC",
+    "devDependencies": {
+        "lite-server": "^2.3.0"
+    },
+    "dependencies": {
+        "@material-ui/core": "^1.2.1"
+    }
+}
