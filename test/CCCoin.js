@@ -21,10 +21,10 @@ contract("CCCoin", accounts => {
             tokenInstance = instance;
             return tokenInstance.totalSupply();
         }).then(totalSupply => {
-            assert.equal(totalSupply.toNumber(), 750000000, 'Total supply set to 750,000,000')
+            assert.equal(totalSupply.toNumber(), 1000000, 'Total supply set to 1,000,000')
             return tokenInstance.balanceOf(accounts[0]);
         }).then(adminBalance => {
-            assert.equal(adminBalance.toNumber(), 750000000, 'It allocates initial amount to admin account')
+            assert.equal(adminBalance.toNumber(), 1000000, 'It allocates initial amount to admin account')
         })
     })
     it('transfers token ownership', () => {
@@ -48,7 +48,7 @@ contract("CCCoin", accounts => {
             assert.equal(balance.toNumber(), 250000, 'adds the amount to the receiving account')
             return tokenInstance.balanceOf(accounts[0])
         }).then(balance => {
-            assert.equal(balance.toNumber(), 749750000, 'deducts amount from the sending account');
+            assert.equal(balance.toNumber(), 750000, 'deducts amount from the sending account');
         })
     })
     it('approves tokens for delegated transfer', () => {
