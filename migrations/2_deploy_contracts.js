@@ -1,4 +1,5 @@
-var CCToken = artifacts.require("./CCToken.sol");
+var CCCoin = artifacts.require("./CCCoin.sol");
 module.exports = deployer => {
-    deployer.deploy(CCToken);
+
+    deployer.deploy(CCCoin, 750000000);
 }
