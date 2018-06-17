@@ -14,7 +14,5 @@
     "devDependencies": {
         "lite-server": "^2.3.0"
     },
-    "dependencies": {
-        "@material-ui/core": "^1.2.1"
-    }
+    "dependencies": {}
 }
