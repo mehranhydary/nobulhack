@@ -14,5 +14,7 @@
     "devDependencies": {
         "lite-server": "^2.3.0"
     },
-    "dependencies": {}
+    "dependencies": {
+        "material-dashboard": "^2.1.0"
+    }
 }
