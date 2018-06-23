@@ -1,9 +1,9 @@
 pragma solidity ^0.4.2;
 
-contract CCCoin {
-    string public name = "CC Coin";
-    string public symbol = "CC"; 
-    string public standard = "CC Coin v1.0";
+contract NobulCoin {
+    string public name = "Nobul Coin";
+    string public symbol = "NBS"; 
+    string public standard = "Nobul Coin v1.0";
     uint public totalSupply;
     event Transfer(
         address indexed _from,

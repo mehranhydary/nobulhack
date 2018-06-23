@@ -21,18 +21,18 @@ App = {
         return App.initContracts();
     },
     initContracts: () => {
-        $.getJSON("CCCoinSale.json", (ccCoinSale) => {
-            App.contracts.CCCoinSale = TruffleContract(ccCoinSale);
-            App.contracts.CCCoinSale.setProvider(App.web3Provider);
-            App.contracts.CCCoinSale.deployed().then(function(ccCoinSale) {
-              console.log("CC Coin Sale Address:", ccCoinSale.address);
+        $.getJSON("NobulCoinSale.json", (nobulCoinSale) => {
+            App.contracts.NobulCoinSale = TruffleContract(nobulCoinSale);
+            App.contracts.NobulCoinSale.setProvider(App.web3Provider);
+            App.contracts.NobulCoinSale.deployed().then(function(nobulCoinSale) {
+              console.log("Nobul Coin Sale Address:", nobulCoinSale.address);
             });            
         }).done(function() {
-            $.getJSON("CCCoin.json", (ccCoin) => {
-              App.contracts.CCCoin = TruffleContract(ccCoin);
-              App.contracts.CCCoin.setProvider(App.web3Provider);
-              App.contracts.CCCoin.deployed().then(function(ccCoin) {
-                console.log("CC Coin Address:", ccCoin.address);
+            $.getJSON("NobulCoin.json", (nobulCoin) => {
+              App.contracts.NobulCoin = TruffleContract(nobulCoin);
+              App.contracts.NobulCoin.setProvider(App.web3Provider);
+              App.contracts.NobulCoin.deployed().then(function(nobulCoin) {
+                console.log("Nobul Coin Address:", nobulCoin.address);
               });
       
               App.listenForEvents();
@@ -41,7 +41,7 @@ App = {
           })
     },
     listenForEvents: () => {
-        App.contracts.CCCoinSale.deployed().then(instance => {
+        App.contracts.NobulCoinSale.deployed().then(instance => {
             instance.Sell({}, {
                 fromBlock: 0,
                 toBlock: 'latest'
@@ -72,7 +72,7 @@ App = {
             console.log('4')
         })
         
-        App.contracts.CCCoinSale.deployed().then(instance => {
+        App.contracts.NobulCoinSale.deployed().then(instance => {
             coinSaleInstance = instance;
             return coinSaleInstance.coinPrice();
         }).then(coinPrice => {
@@ -86,7 +86,7 @@ App = {
             var progressPercent = (Math.ceil(App.coinsSold) / App.coinsAvailable) * 100;
             $('progress').html(progressPercent);
 
-            App.contracts.CCCoin.deployed().then(instance => {
+            App.contracts.NobulCoin.deployed().then(instance => {
                 coinInstance = instance;
                 return coinInstance.balanceOf(App.account);
             }).then(balance => {
@@ -103,7 +103,7 @@ App = {
         $('#loader').show();
         var numberOfCoins = $('#numberOfCoins').val();
         console.log(1, numberOfCoins)
-        App.contracts.CCCoinSale.deployed().then(instance => {
+        App.contracts.NobulCoinSale.deployed().then(instance => {
             console.log(2, numberOfCoins)
             return instance.buyCoins(numberOfCoins, {
                 from: App.account,

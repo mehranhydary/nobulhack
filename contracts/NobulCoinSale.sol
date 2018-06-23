@@ -1,10 +1,10 @@
 pragma solidity ^0.4.2;
 
-import "./CCCoin.sol";
+import "./NobulCoin.sol";
 
-contract CCCoinSale {
+contract NobulCoinSale {
     address admin;
-    CCCoin public  coinContract;
+    NobulCoin public  coinContract;
     uint256 public coinPrice;
     uint256 public coinsSold;
 
@@ -13,7 +13,7 @@ contract CCCoinSale {
         uint256 _amount
     );
 
-    constructor (CCCoin _coinContract, uint256 _coinPrice) public {
+    constructor (NobulCoin _coinContract, uint256 _coinPrice) public {
         admin = msg.sender;
         coinContract = _coinContract;
         coinPrice = _coinPrice;

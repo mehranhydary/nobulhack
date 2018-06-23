@@ -1,12 +1,12 @@
-var CCCoin = artifacts.require("./CCCoin.sol");
-var CCCoinSale = artifacts.require("./CCCoinSale.sol");
+var NobulCoin = artifacts.require("./NobulCoin.sol");
+var NobulCoinSale = artifacts.require("./NobulCoinSale.sol");
 
 module.exports = deployer => {
 
-    deployer.deploy(CCCoin, 1000000).then(() => {
-        // coin price is 0.001
+    deployer.deploy(NobulCoin, 1000000).then(() => {
+        // coin price is 0.001 ETH
         var coinPrice = 1000000000000000;
-        return deployer.deploy(CCCoinSale, CCCoin.address, coinPrice);
+        return deployer.deploy(NobulCoinSale, NobulCoin.address, coinPrice);
     });
     
 }
