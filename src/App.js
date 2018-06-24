@@ -110,7 +110,7 @@ class App extends Component {
                 <ul className="nav justify-content-end nav-tabs">
                   <li className="nav-item">
                     <a className="nav-link" href="/">
-                      <i className="material-icons">battery_charging_full</i>
+                      <i className="material-icons">home</i>
                       Home
                     </a>
                   </li>
