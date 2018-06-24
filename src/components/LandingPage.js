@@ -33,18 +33,18 @@ const LandingPage = () => (
     </div>
 
     <div style={{
-      background: "#000000", 
-      height: "100%", 
-      position: "absolute", 
-      opacity: 0.70, 
-      zIndex: -2, 
+      background: "#000000",
+      height: "100%",
+      position: "absolute",
+      opacity: 0.70,
+      zIndex: -2,
       width: "100%"}}>
     </div>
-    
-    <div className ='container' style={{zIndex: 2, paddingTop: 500+"px", margin: 0, paddingLeft: 150+"px"}}>
+
+    <div className ='container' style={{zIndex: 2, paddingTop: 375+"px", margin: 0, paddingLeft: 150+"px"}}>
       <h3 style={{
-        zIndex: 3, 
-        color: "white", 
+        zIndex: 3,
+        color: "white",
         fontWeight: "bold",
         fontSize: 10+"em",
         height: 175+"px"}}>
@@ -59,9 +59,9 @@ const LandingPage = () => (
         Analysts
       </button>
       </a>
-      
+
       <a href="/dashboard">
-      <button 
+      <button
         type="button"
         className="btn btn-warning">
         Platforms
@@ -69,7 +69,7 @@ const LandingPage = () => (
       </a>
       </div>
     </div>
-    
+
 </div>
   );
 
