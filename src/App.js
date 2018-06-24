@@ -58,28 +58,28 @@ class App extends Component {
     var nobulCoinInstance
     var nobulCoinSaleInstance
 
-    // Get accounts.
-    this.state.web3.eth.getAccounts((error, accounts) => {
-      nobulCoin.deployed().then((instance) => {
-        nobulCoinInstance = instance
-        // Stores a given value, 5 by default.
-        return nobulCoinInstance.set(5, {from: accounts[0]})
-      }).then((result) => {
-        // Get the value from the contract to prove it worked.
-        return nobulCoinInstance.get.call(accounts[0])
-      })
-    })
-    // Get accounts.
-    this.state.web3.eth.getAccounts((error, accounts) => {
-      nobulCoinSale.deployed().then((instance) => {
-        nobulCoinSaleInstance = instance
-        // Stores a given value, 5 by default.
-        return nobulCoinSaleInstance.set(5, {from: accounts[0]})
-      }).then((result) => {
-        // Get the value from the contract to prove it worked.
-        return nobulCoinSaleInstance.get.call(accounts[0])
-      })
-    })
+    // // Get accounts.
+    // this.state.web3.eth.getAccounts((error, accounts) => {
+    //   nobulCoin.deployed().then((instance) => {
+    //     nobulCoinInstance = instance
+    //     // Stores a given value, 5 by default.
+    //     return nobulCoinInstance.set(5, {from: accounts[0]})
+    //   }).then((result) => {
+    //     // Get the value from the contract to prove it worked.
+    //     return nobulCoinInstance.get.call(accounts[0])
+    //   })
+    // })
+    // // Get accounts.
+    // this.state.web3.eth.getAccounts((error, accounts) => {
+    //   nobulCoinSale.deployed().then((instance) => {
+    //     nobulCoinSaleInstance = instance
+    //     // Stores a given value, 5 by default.
+    //     return nobulCoinSaleInstance.set(5, {from: accounts[0]})
+    //   }).then((result) => {
+    //     // Get the value from the contract to prove it worked.
+    //     return nobulCoinSaleInstance.get.call(accounts[0])
+    //   })
+    // })
   }
   listenForEvents() {
     // const contract = require('truffle-contract')
