@@ -19,3 +19,8 @@ a:active{
 a:visited{
   color: #00acc1;
 }
+
+a:link {
+  color: #00acc1;
+
+}
