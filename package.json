@@ -15,6 +15,11 @@
         "lite-server": "^2.3.0"
     },
     "dependencies": {
-        "material-dashboard": "^2.1.0"
+        "google-map-react": "^1.0.4",
+        "material-dashboard": "^2.1.0",
+        "particles.js": "^2.0.0",
+        "react-google-map-street-view": "^1.1.0",
+        "react-streetview": "^1.1.1",
+        "react-video-cover": "^1.2.0"
     }
 }
