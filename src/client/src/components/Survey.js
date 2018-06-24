@@ -27,7 +27,7 @@ class Survey extends Component {
                                                 <label for="inputAddress">Please Input Your Answer</label>
                                                 <textarea rows="4" cols="50"  class="form-control" id="inputAddress" placeholder=""/>
                                             </div>
-                                            <button type="submit" class="btn btn-primary float-right">Submit</button>
+                                            <button type="submit" class="btn btn-info float-right">Submit</button>
                                         </form>
                                     </div>
                                 </div>
@@ -47,7 +47,7 @@ class Survey extends Component {
                                                 <label for="inputAddress">Please Input Your Answer</label>
                                                 <textarea rows="4" cols="50"  class="form-control" id="inputAddress" placeholder=""/>
                                             </div>
-                                            <button type="submit" class="btn btn-primary float-right">Submit</button>
+                                            <button type="submit" class="btn btn-info float-right">Submit</button>
                                         </form>
                                     </div>
                                 </div>
@@ -67,7 +67,7 @@ class Survey extends Component {
                                                 <label for="inputAddress">Please Input Your Answer</label>
                                                 <textarea rows="4" cols="50"  class="form-control" id="inputAddress" placeholder=""/>
                                             </div>
-                                            <button type="submit" class="btn btn-primary float-right">Submit</button>
+                                            <button type="submit" class="btn btn-info float-right">Submit</button>
                                         </form>
                                     </div>
                                 </div>
@@ -75,15 +75,15 @@ class Survey extends Component {
                         </div>
                     </div>
                     <div class="col-6">
-                        <h3>Balance</h3>
-
+                        <h3 style={{"padding-bottom": "20px"}}>Balance</h3>
                         <div class="ml-auto mr-auto">
-                            <div class="card card-pricing bg-primary"><div class="card-body ">
+                            <div class="card-info card-pricing" style={{background: 'linear-gradient(60deg, #26c6da, #00acc1)', "border-radius": "6px"}}>
+                            <div class="card-body">
                                 <div class="card-icon">
                                     <i class="material-icons">money</i>
                                 </div>
                                 <h1 class="card-title " style={{"text-align": "center"}}>$69</h1>
-                                <p class="card-description" style={{"text-align": "center"}}>
+                                <p class="card-description" style={{"text-align": "center", color: "black"}}>
                                     This is the amount of money you have accumulated!
                                 </p>
                                 </div>
@@ -98,68 +98,26 @@ class Survey extends Component {
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th class="text-center">#</th>
-                                    <th>Name</th>
-                                    <th>Job Position</th>
-                                    <th>Since</th>
-                                    <th class="text-right">Salary</th>
-                                    <th class="text-right">Actions</th>
+                                    <th>Question</th>
+                                    <th class="text-right">Variance</th>
+                                    <th class="text-right">Earned</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="text-center">1</td>
                                     <td>Andrew Mike</td>
-                                    <td>Develop</td>
-                                    <td>2013</td>
                                     <td class="text-right">&euro; 99,225</td>
-                                    <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" class="btn btn-info">
-                                            <i class="material-icons">person</i>
-                                        </button>
-                                        <button type="button" rel="tooltip" class="btn btn-success">
-                                            <i class="material-icons">edit</i>
-                                        </button>
-                                        <button type="button" rel="tooltip" class="btn btn-danger">
-                                            <i class="material-icons">close</i>
-                                        </button>
-                                    </td>
+                                    <td class="text-right">&euro; 99,225</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-center">2</td>
-                                    <td>John Doe</td>
-                                    <td>Design</td>
-                                    <td>2012</td>
-                                    <td class="text-right">&euro; 89,241</td>
-                                    <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" class="btn btn-info btn-round">
-                                            <i class="material-icons">person</i>
-                                        </button>
-                                        <button type="button" rel="tooltip" class="btn btn-success btn-round">
-                                            <i class="material-icons">edit</i>
-                                        </button>
-                                        <button type="button" rel="tooltip" class="btn btn-danger btn-round">
-                                            <i class="material-icons">close</i>
-                                        </button>
-                                    </td>
+                                    <td>Andrew Mike</td>
+                                    <td class="text-right">&euro; 99,225</td>
+                                    <td class="text-right">&euro; 99,225</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-center">3</td>
-                                    <td>Alex Mike</td>
-                                    <td>Design</td>
-                                    <td>2010</td>
-                                    <td class="text-right">&euro; 92,144</td>
-                                    <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" class="btn btn-info btn-simple">
-                                            <i class="material-icons">person</i>
-                                        </button>
-                                        <button type="button" rel="tooltip" class="btn btn-success btn-simple">
-                                            <i class="material-icons">edit</i>
-                                        </button>
-                                        <button type="button" rel="tooltip" class="btn btn-danger btn-simple">
-                                            <i class="material-icons">close</i>
-                                        </button>
-                                    </td>
+                                    <td>Andrew Mike</td>
+                                    <td class="text-right">&euro; 99,225</td>
+                                    <td class="text-right">&euro; 99,225</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -173,7 +131,7 @@ class Survey extends Component {
                         <div class="card" >
                             <img class="card-img-top" src="https://picsum.photos/100/50" alt="Card image cap"/>
                             <div class="card-body">
-                                <h4 class="card-title">Card title</h4>
+                                <h4 class="card-title">News Article</h4>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             </div>
@@ -183,7 +141,7 @@ class Survey extends Component {
                         <div class="card" >
                             <img class="card-img-top" src="https://picsum.photos/100/50" alt="Card image cap"/>
                             <div class="card-body">
-                                <h4 class="card-title">Card title</h4>
+                                <h4 class="card-title">News Article</h4>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             </div>
@@ -193,42 +151,13 @@ class Survey extends Component {
                         <div class="card" >
                             <img class="card-img-top" src="https://picsum.photos/100/50" alt="Card image cap"/>
                             <div class="card-body">
-                                <h4 class="card-title">Card title</h4>
+                                <h4 class="card-title">News Article</h4>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img class="d-block w-100" src="https://picsum.photos/100/50" alt="First slide"/>
-                        </div>
-                        <div class="carousel-item">
-                        <img class="d-block w-100" src="https://picsum.photos/200/300/?random" alt="Second slide"/>
-                        </div>
-                        <div class="carousel-item">
-                        <img class="d-block w-100" src="https://picsum.photos/200/50" alt="Third slide"/>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-
-                
             </div>
 
         ) 
