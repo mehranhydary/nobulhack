@@ -71,13 +71,13 @@ const PerceivedValueChart = (
     <Line
       type="monotone"
       dataKey="Actual"
-      stroke="#8884d8"
+      stroke="#fc0505"
       activeDot={{ r: 8 }}
     />
     <Line
       type="monotone"
       dataKey="Estimated"
-      stroke="#82ca9d"
+      stroke="#3afc05"
       strokeDasharray="5 5"
     />
   </LineChart>
@@ -98,7 +98,7 @@ const ProjectedValueChart = (
     <Line
       type="monotone"
       dataKey="Projected Value"
-      stroke="#8884d8"
+      stroke="#e104f9"
       activeDot={{ r: 8 }}
     />
   </LineChart>
