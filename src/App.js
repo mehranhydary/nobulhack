@@ -103,7 +103,7 @@ class App extends Component {
     return (
       <Router>
       <div style={{zIndex: -2}}>
-      <div className="card card-nav-tabs card-plain">
+      <div className="card card-nav-tabs card-plain" style={{marginBottom: 0}}>
         <div className="card-header card-header-info">
           <div className="nav-tabs-navigation">
               <div className="nav-tabs-wrapper">

@@ -8,7 +8,7 @@ import Dashboard from './Dashboard'
 import Survey from './Survey'
 
 const LandingPage = () => (
-<div>
+  <div>
     <span style={{zIndex: 0, position: "absolute", width: "100%"}}>
       <Particles />
     </span>
@@ -41,15 +41,16 @@ const LandingPage = () => (
       width: "100%"}}>
     </div>
     
-    <div className ='container' style={{zIndex: 2, paddingTop: 300+"px"}}>
-      <h2 style={{
+    <div className ='container' style={{zIndex: 2, paddingTop: 500+"px", margin: 0, paddingLeft: 150+"px"}}>
+      <h3 style={{
         zIndex: 3, 
         color: "white", 
         fontWeight: "bold",
-        fontSize: 150+"px"}}>
+        fontSize: 10+"em",
+        height: 175+"px"}}>
         FLOW
-      </h2>
-      <h3 style = {{color: 'white', fontWeight: 'bold'}}>Maximize your insights into the real estate market</h3>
+      </h3>
+      <h3 style = {{color: 'white', fontWeight: 'bold', verticalAlign: "top"}}>Maximize your insights into the real estate market</h3>
       <div>
       <a href="/survey">
       <button
