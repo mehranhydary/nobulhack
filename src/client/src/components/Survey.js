@@ -4,7 +4,7 @@ class Survey extends Component {
     render() {
       return(
             <div class="container"> 
-                <h1>Name/Address</h1>
+                <h3>Mehran Hydary: 0x79b596cFad2D3c79A8752B3a2A1F644a690A0104</h3>
 
                 <div class="row"> 
                     <div class="col-6">
