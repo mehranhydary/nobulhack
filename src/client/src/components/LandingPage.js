@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Dashboard from './Dashboard'
+import Survey from './Survey'
 
 const LandingPage = () => (
     <div>
       <h2>LandingPage</h2>
-      <div class="alert alert-primary" role="alert">
-            This is a primary alert—check it out!
-    </div>
-
+      <ul>
+          <li>
+            <Link to="/">LandingPage</Link>
+          </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+          <li>
+            <Link to="/survey">Survey</Link>
+          </li>
+        </ul>
     </div>
   
   );

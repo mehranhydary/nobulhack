@@ -7,27 +7,11 @@ import Dashboard from './components/Dashboard'
 import LandingPage from './components/LandingPage'
 import Survey from './components/Survey'
 
-
-
 class App extends Component {
   render() {
     return (
       <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">LandingPage</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-          <li>
-            <Link to="/survey">Survey</Link>
-          </li>
-        </ul>
-  
-        <hr />
-  
+      <div>  
         <Route exact path="/" component={LandingPage} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/survey" component={Survey} />
