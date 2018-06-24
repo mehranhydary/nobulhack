@@ -12,9 +12,11 @@ App = {
     },
     initWeb3: () => {
         if(typeof web3 !== 'undefined') {
+            
             App.web3Provider = web3.currentProvider;
             web3 = new Web3(web3.currentProvider);
         } else {
+            
             App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
             web3 = new Web3(App.web3Provider);
         }
@@ -28,6 +30,7 @@ App = {
               console.log("Nobul Coin Sale Address:", nobulCoinSale.address);
             });            
         }).done(function() {
+            
             $.getJSON("NobulCoin.json", (nobulCoin) => {
               App.contracts.NobulCoin = TruffleContract(nobulCoin);
               App.contracts.NobulCoin.setProvider(App.web3Provider);
@@ -46,6 +49,7 @@ App = {
                 fromBlock: 0,
                 toBlock: 'latest'
             }).watch((error, event) => {
+                console.log('5')
                 console.log('Event triggered', event);
                 App.render();
             })
@@ -53,10 +57,10 @@ App = {
     },
     render: () => {
         if(App.loading){
-            console.log('1')
+            console.log('6')
             return;
         }
-        console.log('2')
+        console.log('7')
         App.loading = true;
         var loader = $('#loader');
         var content = $('#content');
@@ -64,12 +68,12 @@ App = {
         loader.show();
         content.hide();
         web3.eth.getCoinbase((err, account) => {
-            console.log('3')
+            console.log('8')
             if(err === null){
                 App.account = account;
                 $('#accountAddress').html('Your account: ' + account);
             }
-            console.log('4')
+            console.log('9')
         })
         
         App.contracts.NobulCoinSale.deployed().then(instance => {
@@ -80,6 +84,7 @@ App = {
             $('.coin-price').html(web3.fromWei(App.coinPrice, 'ether').toNumber());
             return coinSaleInstance.coinsSold();
         }).then(coinsSold => {
+            console.log('10')
             App.coinsSold = coinsSold.toNumber();
             $('.coins-sold').html(App.coinsSold);
             $('.coins-available').html(App.coinsAvailable);
@@ -90,6 +95,7 @@ App = {
                 coinInstance = instance;
                 return coinInstance.balanceOf(App.account);
             }).then(balance => {
+                console.log('11')
                 $('.coin-balance').html(balance.toNumber());
                 App.loading = false;
                 loader.hide();
@@ -104,6 +110,7 @@ App = {
         var numberOfCoins = $('#numberOfCoins').val();
         console.log(1, numberOfCoins)
         App.contracts.NobulCoinSale.deployed().then(instance => {
+            
             console.log(2, numberOfCoins)
             return instance.buyCoins(numberOfCoins, {
                 from: App.account,
@@ -113,14 +120,12 @@ App = {
         }).then(result => {
             console.log('Coins are purchased...')
             $('form').trigger('reset')
-            // $('#loader').hide();
-            // $('#content').show();
-            // Waiting for sell event to trigger an event.
         });
     }
 }
 $(() => {
     $(window).load(()=>{
+        console.log('193')
         App.init();
     })
 })
