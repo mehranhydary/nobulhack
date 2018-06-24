@@ -6,8 +6,6 @@ import LandingPage from './components/LandingPage'
 import Survey from './components/Survey'
 import PlatformAccess from './components/PlatformAccess'
 
-
-
 class App extends Component {
   render() {
     return (

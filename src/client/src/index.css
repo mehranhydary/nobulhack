@@ -3,3 +3,19 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+a {
+  color: #00acc1;
+}
+
+a:hover{
+  color: #00acc1;
+}
+
+a:active{
+  color: #00acc1;
+}
+
+a:visited{
+  color: #00acc1;
+}
